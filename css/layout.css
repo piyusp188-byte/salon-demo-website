@@ -106,13 +106,15 @@
   right: -100%;
   width: min(340px, 85vw);
   height: 100vh;
+  height: 100dvh;
   background: var(--color-surface);
   box-shadow: var(--shadow-lg);
-  z-index: 999;
-  padding: 2.5rem 2rem;
+  z-index: 1050;
+  padding: 2.25rem 1.75rem;
   display: flex;
   flex-direction: column;
   transition: right var(--transition-normal);
+  overflow-y: auto;
 }
 
 .mobile-nav-drawer.open {
@@ -124,7 +126,7 @@
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(4px);
-  z-index: 998;
+  z-index: 1040;
   opacity: 0;
   visibility: hidden;
   transition: all var(--transition-fast);
@@ -139,7 +141,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
   padding-bottom: 1.25rem;
   border-bottom: 1px solid var(--color-border);
 }
@@ -157,7 +159,7 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .drawer-link {
@@ -171,6 +173,27 @@
 .drawer-link.active {
   color: var(--color-primary);
   font-weight: var(--fw-semibold);
+}
+
+/* Elevated drawer action buttons (positioned well above bottom bar & gesture nav) */
+.drawer-actions,
+.mobile-nav-drawer > div:last-child {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: calc(var(--bottom-bar-height) + env(safe-area-inset-bottom, 0px) + 24px) !important;
+  width: 100%;
+}
+
+/* Ensure WhatsApp FAB disappears when drawer is active */
+body.drawer-open .whatsapp-fab,
+.drawer-backdrop.active ~ .whatsapp-fab {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  transform: scale(0.8);
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
 /* --------------------------------------------------------------------------
@@ -272,6 +295,18 @@
   margin-bottom: 2.5rem;
 }
 
+.hero-cta-group .btn-outline-white {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.9) !important;
+}
+
+.hero-cta-group .btn-outline-white svg,
+.hero-cta-group .btn-outline-white span {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
 .hero-trust-highlights {
   display: flex;
   flex-wrap: wrap;
@@ -354,6 +389,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.location-card-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+.location-card-actions .btn {
+  flex: 1 1 auto;
 }
 
 .hours-table {
@@ -649,6 +696,22 @@
   .map-wrapper,
   .map-wrapper iframe {
     min-height: 280px;
+  }
+
+  .location-info-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .location-card-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .location-card-actions .btn {
+    width: 100%;
+    flex: 1 1 100%;
+    justify-content: center;
   }
 }
 

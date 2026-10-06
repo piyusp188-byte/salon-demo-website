@@ -58,15 +58,46 @@
   color: var(--color-primary-dark);
 }
 
-.btn-outline-white {
-  background-color: transparent;
-  color: var(--color-white);
-  border: 1.5px solid rgba(255, 255, 255, 0.7);
+.btn-outline-white,
+.btn-outline-white:link,
+.btn-outline-white:visited {
+  background-color: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
 }
 
-.btn-outline-white:hover {
-  background-color: var(--color-white);
-  color: var(--color-text-primary);
+.btn-outline-white svg {
+  color: #FFFFFF !important;
+  stroke: #FFFFFF !important;
+}
+
+.btn-outline-white span {
+  color: #FFFFFF !important;
+}
+
+.btn-outline-white:hover,
+.btn-outline-white:focus,
+.btn-outline-white:active {
+  background-color: #FFFFFF;
+  color: var(--color-text-primary) !important;
+  border-color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+.btn-outline-white:hover svg,
+.btn-outline-white:focus svg,
+.btn-outline-white:active svg {
+  color: var(--color-text-primary) !important;
+  stroke: var(--color-text-primary) !important;
+}
+
+.btn-outline-white:hover span,
+.btn-outline-white:focus span,
+.btn-outline-white:active span {
+  color: var(--color-text-primary) !important;
 }
 
 .btn-whatsapp {

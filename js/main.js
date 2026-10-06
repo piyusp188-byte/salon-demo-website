@@ -45,6 +45,7 @@ function initMobileDrawer() {
   const openDrawer = () => {
     drawer.classList.add('open');
     if (backdrop) backdrop.classList.add('active');
+    document.body.classList.add('drawer-open');
     document.body.style.overflow = 'hidden';
     toggleBtn?.setAttribute('aria-expanded', 'true');
   };
@@ -52,6 +53,7 @@ function initMobileDrawer() {
   const closeDrawer = () => {
     drawer.classList.remove('open');
     if (backdrop) backdrop.classList.remove('active');
+    document.body.classList.remove('drawer-open');
     document.body.style.overflow = '';
     toggleBtn?.setAttribute('aria-expanded', 'false');
   };
