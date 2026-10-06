@@ -1,0 +1,32 @@
+[[redirects]]
+  from = "/book"
+  to = "https://r.postserver.simplybook.me"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/reviews"
+  to = "https://maps.app.goo.gl/6WDFSV6VFLX1EU9y9"
+  status = 302
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.mp4"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"

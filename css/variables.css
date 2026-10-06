@@ -1,0 +1,92 @@
+/* ==========================================================================
+   Choice Beauty Salon — Design System Variables & Tokens
+   Option A: "Rose Dusk" (Warm Rose Terracotta, Rose Gold, Warm Cream)
+   ========================================================================== */
+
+:root {
+  /* Brand Palette */
+  --color-primary: #C7836A;          /* Rose Terracotta */
+  --color-primary-hover: #B46F56;
+  --color-primary-light: #F4DFD7;    /* Delicate Blush */
+  --color-primary-dark: #9B5A44;     /* Deep Rich Rose */
+  
+  --color-accent: #C29B38;           /* Luminous Rose Gold / Warm Brass */
+  --color-accent-light: #F2E3B6;
+  --color-accent-dark: #917122;
+
+  --color-surface: #FDF9F6;          /* Warm Cream Background */
+  --color-surface-alt: #F7EEE7;      /* Blush Alabaster Tint */
+  --color-surface-card: #FFFFFF;     /* Pristine Card Surface */
+  --color-surface-translucent: rgba(253, 249, 246, 0.88);
+  --color-surface-dark: #1E120D;     /* Midnight Espresso */
+
+  --color-text-primary: #2C1810;     /* Deep Espresso Charcoal */
+  --color-text-secondary: #6B4F44;   /* Muted Warm Mocha */
+  --color-text-muted: #8F7267;       /* Soft Taupe */
+  --color-text-light: #FFFFFF;
+  --color-text-gold: #C29B38;
+
+  --color-border: #EADBCE;           /* Subtle warm rose border */
+  --color-border-focus: #C7836A;
+  --color-border-card: rgba(199, 131, 106, 0.18);
+
+  /* Status / Utility Colors */
+  --color-whatsapp: #25D366;
+  --color-whatsapp-hover: #1EBE5D;
+  --color-success: #2E7D32;
+  --color-success-bg: #E8F5E9;
+  --color-warning: #ED6C02;
+  --color-star: #F59E0B;             /* Google Golden Star */
+
+  /* Typography */
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Spacing Scale (8px base) */
+  --space-2xs: 0.25rem;  /* 4px */
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+  --space-4xl: 6rem;     /* 96px */
+
+  /* Layout */
+  --container-max: 1240px;
+  --header-height: 80px;
+  --header-mobile-height: 68px;
+  --bottom-bar-height: 64px;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Elevation / Shadows */
+  --shadow-sm: 0 2px 8px rgba(44, 24, 16, 0.05);
+  --shadow-md: 0 8px 24px rgba(44, 24, 16, 0.08);
+  --shadow-lg: 0 16px 36px rgba(44, 24, 16, 0.12);
+  --shadow-glow: 0 0 24px rgba(199, 131, 106, 0.35);
+  --shadow-gold: 0 4px 16px rgba(194, 155, 56, 0.25);
+
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.4);
+  --glass-blur: blur(14px);
+}
