@@ -7,12 +7,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  min-width: 0;
 }
 
 html {
   font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
@@ -22,6 +25,7 @@ body {
   line-height: 1.6;
   font-weight: var(--fw-regular);
   overflow-x: hidden;
+  max-width: 100%;
   position: relative;
   min-height: 100vh;
 }
@@ -191,22 +195,24 @@ img, video {
 
 .brand-title {
   font-family: var(--font-serif);
-  font-size: 1.85rem;
+  font-size: clamp(1.35rem, 4.5vw, 1.85rem);
   font-weight: var(--fw-light);
   letter-spacing: 0.04em;
   color: var(--color-text-primary);
   text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .brand-subtitle {
   font-family: var(--font-sans);
-  font-size: 0.64rem;
+  font-size: clamp(0.52rem, 1.6vw, 0.64rem);
   letter-spacing: 0.28em;
   font-weight: var(--fw-semibold);
   color: var(--color-accent);
   text-transform: uppercase;
   margin-top: 2px;
-  padding-left: 36px;
+  padding-left: clamp(24px, 5.5vw, 36px);
+  white-space: nowrap;
 }
 
 /* Helpers */
