@@ -393,14 +393,25 @@ body.drawer-open .whatsapp-fab,
 
 .location-card-actions {
   display: flex;
+  flex-direction: column;
   gap: 12px;
-  flex-wrap: wrap;
-  align-items: center;
   width: 100%;
+  margin-top: 1.25rem;
 }
 
 .location-card-actions .btn {
-  flex: 1 1 auto;
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 992px) {
+  .location-card-actions {
+    flex-direction: row;
+  }
+  .location-card-actions .btn {
+    width: auto;
+    flex: 1;
+  }
 }
 
 .hours-table {
