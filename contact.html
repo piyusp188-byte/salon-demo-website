@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>Contact & Location — Choice Beauty Salon Ghatlodiya, Ahmedabad</title>
   <meta name="description" content="Visit Choice Beauty Salon at Marutinandan Complex, KK Nagar Rd, Ghatlodiya, Ahmedabad 380061. Call 097235 12890, chat on WhatsApp, or book online via SimplyBook.me.">
   <link rel="canonical" href="https://choicebeautysalon.in/contact.html">
@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="css/components.css?v=1.2">
   <link rel="stylesheet" href="css/layout.css?v=1.2">
   <link rel="stylesheet" href="css/animations.css?v=1.2">
+  <link rel="stylesheet" href="css/mobile.css?v=1.0">
 </head>
 <body>
 
@@ -181,7 +182,7 @@
     <!-- Map & Contact Form Grid -->
     <section class="section" style="padding-top: 1rem;">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1.1fr 1fr; gap: clamp(2rem, 4vw, 3.5rem); align-items: start;">
+        <div class="contact-grid">
           
           <!-- Contact Form Card -->
           <div class="form-card">
@@ -199,12 +200,12 @@
 
               <div class="form-group">
                 <label for="client-name" class="form-label">Your Name *</label>
-                <input type="text" id="client-name" name="name" class="form-input" placeholder="e.g. Priyal Patel" required>
+                <input type="text" id="client-name" name="name" class="form-input" placeholder="e.g. Priyal Patel" required autocomplete="name">
               </div>
 
               <div class="form-group">
                 <label for="client-phone" class="form-label">Phone / WhatsApp Number *</label>
-                <input type="tel" id="client-phone" name="phone" class="form-input" placeholder="e.g. 097235 12890" required>
+                <input type="tel" id="client-phone" name="phone" class="form-input" placeholder="e.g. 097235 12890" required inputmode="tel" autocomplete="tel">
               </div>
 
               <div class="form-group">

@@ -9,3 +9,6 @@ Desktop.ini
 # Editor directories
 .vscode/
 .idea/
+
+# Test output
+test-results/

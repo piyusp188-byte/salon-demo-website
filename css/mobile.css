@@ -1,0 +1,139 @@
+/* ================================================================
+   Choice Beauty Salon — Mobile Override Sheet v1.0
+   All desktop appearance is completely untouched.
+   overflow-x: clip is a SAFETY NET — real fixes are in layout classes.
+   ================================================================ */
+
+/* Safety net after real layout fixes */
+main, .site-footer, .site-header { overflow-x: clip; max-width: 100%; }
+
+/* -- UTILITY: responsive 2-col to 1-col grid -- */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: start;
+}
+@media (max-width: 700px) {
+  .grid-2col { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+}
+
+/* -- UTILITY: contact page form + map grid -- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+}
+@media (max-width: 860px) {
+  .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+}
+
+/* -- UTILITY: flex CTA button groups -- */
+.flex-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+@media (max-width: 420px) {
+  .flex-cta { flex-direction: column; align-items: stretch; }
+  .flex-cta .btn { width: 100%; justify-content: center; }
+}
+
+/* -- UTILITY: reviews score banner -- */
+.score-banner-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.score-row { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
+.score-cta { display: flex; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 500px) {
+  .score-banner-inner { flex-direction: column; align-items: flex-start; }
+  .score-cta { flex-direction: column; width: 100%; }
+  .score-cta .btn { width: 100%; justify-content: center; }
+}
+
+/* -- About page founder image -- */
+.about-founder-img {
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+}
+
+/* -- Page hero: use mobile header height -- */
+@media (max-width: 860px) {
+  .page-hero {
+    padding-top: calc(var(--header-mobile-height) + 2rem);
+    padding-bottom: 2.5rem;
+  }
+}
+
+/* -- Hero: stronger overlay + text contrast on mobile -- */
+@media (max-width: 768px) {
+  .hero-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(20, 10, 5, 0.75) 0%,
+      rgba(20, 10, 5, 0.85) 50%,
+      rgba(10, 5, 2, 0.96) 100%
+    );
+  }
+  .hero-title { text-shadow: 0 2px 20px rgba(0,0,0,0.6); }
+  .hero-video { object-position: center 20%; }
+}
+
+/* -- Footer: collapse to 1-col earlier -- */
+@media (max-width: 520px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+/* -- Buttons: allow text wrap -- */
+@media (max-width: 480px) {
+  .btn { white-space: normal; max-width: 100%; }
+}
+
+/* -- Forms: prevent iOS zoom (16px minimum) -- */
+.form-input, .form-select, .form-textarea { font-size: max(1rem, 16px); }
+
+/* -- Map: smaller on mobile -- */
+@media (max-width: 600px) {
+  .map-wrapper, .map-wrapper iframe { min-height: 250px; }
+}
+
+/* -- Mobile bar: safe-area + Call contrast -- */
+@media (max-width: 768px) {
+  .mobile-action-bar { padding-bottom: max(env(safe-area-inset-bottom, 0px), 6px); }
+  .mobile-action-link:first-child { color: var(--color-text-primary); }
+}
+
+/* -- Main: bottom padding so bar never hides footer content -- */
+@media (max-width: 768px) {
+  main { padding-bottom: calc(var(--bottom-bar-height) + env(safe-area-inset-bottom, 0px) + 1rem); }
+}
+
+/* -- WhatsApp FAB: hide on mobile (bottom bar already has WhatsApp) -- */
+@media (max-width: 768px) {
+  .whatsapp-fab { display: none !important; }
+}
+
+/* -- Filter tabs: tighter on narrow phones -- */
+@media (max-width: 380px) {
+  .filter-tab { padding: 5px 10px; font-size: 0.76rem; }
+  .gallery-item { height: 210px; }
+}
+
+/* -- Body line-height: tighten on mobile -- */
+@media (max-width: 480px) {
+  body { line-height: 1.55; }
+}
+
+/* -- Hero: use dvh -- */
+.hero-section { min-height: 100dvh; }
